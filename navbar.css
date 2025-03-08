@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        
+:root {
+    --primary-color: #0e4383;
+    --secondary-color: #e4a12f;
+    --accent-color-1: #27ae60;
+    --accent-color-2: #c0392b;
+    --accent-color-3: #2980b9;
+    --accent-color-4: #8e44ad;
+    --accent-color-5: #d35400;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --dark-text: #333333;
+    --light-text: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+    direction: rtl;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: white;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.about-button {
+    background-color: #3c3c10;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hamburger menu icon for mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+    
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+    
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15px;
+        order: 4;
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    .logo {
+        font-size: 24px;
+        order: 1;
+    }
+    
+    .about-button {
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .about-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .nav a {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
