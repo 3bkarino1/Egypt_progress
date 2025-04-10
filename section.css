@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+        
+:root {
+    --primary-color: #0e4383;
+    --secondary-color: #e4a12f;
+    --accent-color-1: #27ae60;
+    --accent-color-2: #c0392b;
+    --accent-color-3: #2980b9;
+    --accent-color-4: #8e44ad;
+    --accent-color-5: #d35400;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --dark-text: #333333;
+    --light-text: #666666;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.intro {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.initiative-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.initiative-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    padding: 20px;
+    color: var(--white);
+    position: relative;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-content p {
+    margin-bottom: 15px;
+}
+
+.card-content ul {
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+.card-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 20px 0 10px 0;
+    border-right: 4px solid var(--primary-color);
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+/* زر التفاصيل */
+.card-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.details-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    width: 100%;
+}
+
+.details-btn:hover {
+    background-color: #0a3369;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-btn:active {
+    transform: translateY(0);
+}
+
+/* Initiative-specific styles */
+.haya-karima { background-color: var(--accent-color-1); }
+.tahya-misr { background-color: var(--accent-color-3); }
+.mashrouak { background-color: var(--accent-color-5); }
+.hayat-karima { background-color: var(--accent-color-1); }
+.sokna-karima { background-color: var(--accent-color-4); }
+.million-units { background-color: var(--accent-color-2); }
+.ahalina { background-color: var(--primary-color); }
+.takaful-karama { background-color: var(--secondary-color); }
+.health-initiatives { background-color: var(--accent-color-2); }
+.education-initiative { background-color: var(--accent-color-3); }
+
+.btn-hk { background-color: var(--accent-color-1); }
+.btn-tm { background-color: var(--accent-color-3); }
+.btn-ma { background-color: var(--accent-color-5); }
+.btn-hi { background-color: var(--accent-color-2); }
+.btn-sk { background-color: var(--accent-color-4); }
+.btn-mu { background-color: var(--accent-color-2); }
+.btn-ah { background-color: var(--primary-color); }
+.btn-tk { background-color: var(--secondary-color); }
+.btn-ed { background-color: var(--accent-color-3); }
+
+.btn-hk:hover { background-color: #1e8449; }
+.btn-tm:hover { background-color: #1a5276; }
+.btn-ma:hover { background-color: #a04000; }
+.btn-hi:hover { background-color: #922b21; }
+.btn-sk:hover { background-color: #6c3483; }
+.btn-mu:hover { background-color: #922b21; }
+.btn-ah:hover { background-color: #0a3369; }
+.btn-tk:hover { background-color: #b9821f; }
+.btn-ed:hover { background-color: #1a5276; }
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 30px;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .intro p {
+        font-size: 1rem;
+    }
+}
